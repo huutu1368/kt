@@ -22,6 +22,10 @@ class MainActivity : AppCompatActivity() {
         {
             binding.soLuong.error = "Vui logn nhap so luong hop le"
             return false
+        }else
+        {
+            val phanLoai = if (soluong<5) "it" else "nhieu"
+            Toast.makeText(this, "Phan loai: ${phanLoai}", Toast.LENGTH_SHORT).show()
         }
 
         return true
